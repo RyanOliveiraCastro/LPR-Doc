@@ -1,0 +1,3089 @@
+{
+	"info": {
+		"_postman_id": "a1c860fd-aa9d-4461-a407-afcb499047d8",
+		"name": "LPR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CAIXA",
+			"item": [
+				{
+					"name": "CAIXA",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/caixa",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/caixa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa"
+							]
+						},
+						"description": "listar todas as Caixas"
+					},
+					"response": []
+				},
+				{
+					"name": "CAIXA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    caixa: {\n      id: 2\n    },\n    tipoServico: {\n      id: 1\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/servico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico"
+							]
+						},
+						"description": "Adicionar Caixa"
+					},
+					"response": []
+				},
+				{
+					"name": "CAIXA",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/caixa/1"
+						},
+						"url": {
+							"raw": "http://localhost:8080/caixa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"1"
+							]
+						},
+						"description": "Apagar caixa especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "CAIXA",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/caixa/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/caixa/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"2"
+							]
+						},
+						"description": "listar caixa especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "CAIXA NAO USADAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/caixa/notUsed",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"notUsed"
+							]
+						},
+						"description": "Listar Caixas que não estão em uso"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TABELA PRECO",
+			"item": [
+				{
+					"name": "TABELA PRECO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    descricao: TesteFinal15,\n    itens: [\n\t\t\t\t{\n\t\t\t\t\tprazo: 300,\n\t\t\t\t\tvalor: 3000,\n\t\t\t\t\t tipoServico: {\n\t\t\t\t\t\tid: 1\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\tprazo: 200 ,\n\t\t\t\tvalor: 2000,\n\t\t\t\t tipoServico: {\n          id: 3\n          }\n\t\t\t\t},\n\t\t\t\n\t\t\t\t{\n\t\t\t\t\tprazo: 100,\n\t\t\t\t\tvalor: 1000,\n\t\t\t\t\t tipoServico: {\n\t\t\t\t\t\tid: 4\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t]\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tabelaPreco/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tabelaPreco",
+								"25"
+							]
+						},
+						"description": "Atualizar Tabela de Preço"
+					},
+					"response": []
+				},
+				{
+					"name": "TABELA PRECO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/tabelaPreco/1"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tabelaPreco/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tabelaPreco",
+								"1"
+							]
+						},
+						"description": "Apagar tabela de Preco especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "TABELA PRECO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/tabelaPreco/25",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/tabelaPreco/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tabelaPreco",
+								"25"
+							]
+						},
+						"description": "listar tabela de preco especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "TABELA PRECO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/tabelaPreco",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/tabelaPreco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tabelaPreco"
+							]
+						},
+						"description": "listar todas as tabelas de preco"
+					},
+					"response": []
+				},
+				{
+					"name": "TABELA PRECO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    descricao: Troca2,\n    itens: [\n\t\t\t\t{\n\t\t\t\t\tprazo: 3,\n\t\t\t\t\tvalor: 300,\n\t\t\t\t\t tipoServico: {\n\t\t\t\t\t\tid: 1\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\tprazo: 2 ,\n\t\t\t\tvalor: 200,\n\t\t\t\t tipoServico: {\n          id: 3\n          }\n\t\t\t\t},\n\t\t\t\n\t\t\t\t{\n\t\t\t\t\tprazo: 1,\n\t\t\t\t\tvalor: 100,\n\t\t\t\t\t tipoServico: {\n\t\t\t\t\t\tid: 4\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t]\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tabelaPreco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tabelaPreco"
+							]
+						},
+						"description": "adicionar tabela de preco"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ORDEM SERVICO",
+			"item": [
+				{
+					"name": "ORDEM SERVICO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n  {\n    paciente: MARCOS,\n    entrega: 2020-07-15,\n    observacao: Recebida,\n    valor: 200.0,\n\t\titens: [\n\t\t\t{\n\t\t\t\tservico: {\n\t\t\t\t\tid: 2\n\t\t\t\t},\t\t\t\n\t\t\t\tvalor: 300\n\t\t\t}\n\t\t\t],\n    funcionario: {\n      id: 1\n    },\n    protetico: {\n      id: 1\n    },\n    cliente: {\n      id: 2\n    },\n\t\tatualizacaoEtapa: ENTREGUE\n  }\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/ordemServico/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico",
+								"16"
+							]
+						},
+						"description": "atualizar ordem de servico especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "ORDEM SERVICO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/ordemServico/1"
+						},
+						"url": {
+							"raw": "http://localhost:8080/ordemServico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico",
+								"1"
+							]
+						},
+						"description": "apagar ordem de servico especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "ORDEM SERVICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/ordemServico/16",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/ordemServico/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico",
+								"16"
+							]
+						},
+						"description": "listar ordem de servico especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "ORDEM SERVICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/ordemServico",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/ordemServico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico"
+							]
+						},
+						"description": "listar todas as ordens de servico"
+					},
+					"response": []
+				},
+				{
+					"name": "ORDEM SERVICO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n  {\n    paciente: MARCOS,\n    entrega: 2020-07-15,\n    observacao: Recebida,\n    valor: 200.0,\n\t\titens: [\n\t\t\t{\n\t\t\t\tservico: {\n\t\t\t\t\tid: 2\n\t\t\t\t},\t\t\t\n\t\t\t\tvalor: 200\n\t\t\t}\n\t\t\t],\n    funcionario: {\n      id: 1\n    },\n    protetico: {\n      id: 1\n    },\n    cliente: {\n      id: 2\n    },\n\t\tatualizacaoEtapa: ENTREGUE\n  }\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/ordemServico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico"
+							]
+						},
+						"description": "adicionar ordem de servico"
+					},
+					"response": []
+				},
+				{
+					"name": "ORDEM SERVICO POR PROTETICO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/ordemServico/buscarPorProtetico/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico",
+								"buscarPorProtetico",
+								"5"
+							]
+						},
+						"description": "LISTAR ORDENS DE SERVIÇO DE UM PROTETICO ESPECIFICO"
+					},
+					"response": []
+				},
+				{
+					"name": "ORDEM SERVICO POR FUNCIONARIO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/ordemServico/buscarPorFuncionario/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico",
+								"buscarPorFuncionario",
+								"5"
+							]
+						},
+						"description": "LISTAR ORDENS DE SERVIÇO DE UM FUNCIONARIO ESPECIFICO"
+					},
+					"response": []
+				},
+				{
+					"name": "ORDEM SERVICO POR CLIENTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/ordemServico/buscarPorCliente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ordemServico",
+								"buscarPorCliente",
+								"1"
+							]
+						},
+						"description": "LISTAR ORDENS DE SERVIÇO DE UM CLIENTE ESPECIFICO"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "FUNCIONARIO",
+			"item": [
+				{
+					"name": "FUNCIONARIO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n \"nome\": \"Ryan Oliveira\",\r\n    \"cpf\": \"14411851784\",\r\n    \"rua\": \"Rafael Dias Pacheco\",\r\n    \"numero\": 86,\r\n    \"bairro\": {\r\n      \"id\": 3    \r\n    },\r\n    \"telefone\": {\r\n      \"id\": 1\r\n    },\r\n    \"email\": \"ryanocastro@hotmail.com\",\r\n    \"senha\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario"
+							]
+						},
+						"description": "Adicionar Funcionario"
+					},
+					"response": []
+				},
+				{
+					"name": "FUNCIONARIO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/funcionario/2"
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"2"
+							]
+						},
+						"description": "Apagar funcionario especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "FUNCIONARIO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/funcionario/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"2"
+							]
+						},
+						"description": "Listar funcionario especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "FUNCIONARIO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/funcionario",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario"
+							]
+						},
+						"description": "Listar todos Funcionarios"
+					},
+					"response": []
+				},
+				{
+					"name": "FUNCIONARIO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nome\": \"Ryan Oliveira\",\r\n    \"cpf\": \"14411851784\",\r\n    \"rua\": \"Rafael Dias Pacheco\",\r\n    \"numero\": 86,\r\n    \"bairro\": {\r\n      \"id\": 3    \r\n    },\r\n    \"telefone\": {\r\n      \"id\": 1\r\n    },\r\n    \"email\": \"ryanocastro@hotmail.com\",\r\n    \"senha\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"2"
+							]
+						},
+						"description": "Atualizar funcionario especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "FUNCIONARIO QUANTIDADE DE OS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/funcionario/countOrdemServico/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"countOrdemServico",
+								"5"
+							]
+						},
+						"description": "Listar Quantidade de OS do funcionario especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "FUNCIONARIO ATIVO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/funcionario/funcionariosAtivos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"funcionariosAtivos"
+							]
+						},
+						"description": "Listar Funcionarios Ativos"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PAGAMENTO",
+			"item": [
+				{
+					"name": "PAGAMENTO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/pagamento/17/2"
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamento/17/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamento",
+								"17",
+								"2"
+							]
+						},
+						"description": "Apagar Pagamento Especifico\r\n\r\nOS_ID/SERVICO_ID"
+					},
+					"response": []
+				},
+				{
+					"name": "PAGAMENTO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/pagamento/17/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamento/17/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamento",
+								"17",
+								"2"
+							]
+						},
+						"description": "listar pagamento especifico\r\n\r\nOS_ID/SERVICO_ID"
+					},
+					"response": []
+				},
+				{
+					"name": "PAGAMENTO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/pagamento",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamento"
+							]
+						},
+						"description": "listar pagamentos"
+					},
+					"response": []
+				},
+				{
+					"name": "PAGAMENTO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    dataPagamento: 2020-05-15,\n    formaPagamento: BOLETO,\n    pago: true,\n    valor: 200.0,\n    servicoId: 2,\n    ordemServicoId: 18\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamento"
+							]
+						},
+						"description": "Adicionar Pagamento"
+					},
+					"response": []
+				},
+				{
+					"name": "PAGAMENTO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    dataPagamento: 2020-05-15,\n\t\tformaPagamento: BOLETO,\n    pago: true,\n    valor: 800.0,\n    servicoId: 2,\n    ordemServicoId: 17\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamento/17/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamento",
+								"17",
+								"2"
+							]
+						},
+						"description": "Atualizar pagamento especifico\r\n\r\nOS_ID/SERVICO_ID"
+					},
+					"response": []
+				},
+				{
+					"name": "ESTA PAGO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pagamento/isPago/72",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamento",
+								"isPago",
+								"72"
+							]
+						},
+						"description": "Verifica se OS está Paga"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TRANSPORTE",
+			"item": [
+				{
+					"name": "TRANSPORTE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/pagamento/17/2"
+						},
+						"url": {
+							"raw": "http://localhost:8080/transporte/72/149",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transporte",
+								"72",
+								"149"
+							]
+						},
+						"description": "Apagar Transporte Especifico\r\n\r\nOS_ID/SERVICO_ID"
+					},
+					"response": []
+				},
+				{
+					"name": "TRANSPORTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/pagamento/17/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/transporte/72/149",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transporte",
+								"72",
+								"149"
+							]
+						},
+						"description": "listar transporte especifico\r\n\r\nOS_ID/SERVICO_ID"
+					},
+					"response": []
+				},
+				{
+					"name": "TRANSPORTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/pagamento",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/transporte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transporte"
+							]
+						},
+						"description": "listar transporte"
+					},
+					"response": []
+				},
+				{
+					"name": "TRANSPORTE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"dataEntrega\": \"2020-08-31\",\n    \"formaTransporte\": \"MOTOBOY\",\n    \"valor\": 20.0,\n    \"servicoId\": 149,\n    \"ordemServicoId\": 72\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/transporte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transporte"
+							]
+						},
+						"description": "Adicionar transporte"
+					},
+					"response": []
+				},
+				{
+					"name": "TRANSPORTE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"dataEntrega\": \"2020-08-31\",\n    \"formaTransporte\": \"MOTOBOY\",\n    \"valor\": 20.0,\n    \"servicoId\": 149,\n    \"ordemServicoId\": 72\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/transporte/72/149",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transporte",
+								"72",
+								"149"
+							]
+						},
+						"description": "Atualizar transporte especifico\r\n\r\nOS_ID/SERVICO_ID"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "28484487-43f7-4d4b-8911-a850f32cb884",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d66b968d-f99b-4e5c-9261-3c545dee9e3c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PROTETICO",
+			"item": [
+				{
+					"name": "PROTETICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/protetico",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/protetico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"protetico"
+							]
+						},
+						"description": "listar proteticos"
+					},
+					"response": []
+				},
+				{
+					"name": "PROTETICO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"nome\": \"Ryan Oliveira\",\r\n    \"cpf\": \"14411851784\",\r\n    \"rua\": \"Rafael Dias Pacheco\",\r\n    \"numero\": 86,\r\n    \"bairro\": {\r\n      \"id\": 3    \r\n    },\r\n    \"telefone\": {\r\n      \"id\": 1\r\n    },\r\n    \"email\": \"ryanocastro@hotmail.com\",\r\n    \"senha\": \"123456\"\r\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/protetico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"protetico"
+							]
+						},
+						"description": "adicionar protetico"
+					},
+					"response": []
+				},
+				{
+					"name": "PROTETICO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"nome\": \"Ryan Oliveira\",\r\n    \"cpf\": \"14411851784\",\r\n    \"rua\": \"Rafael Dias Pacheco\",\r\n    \"numero\": 86,\r\n    \"bairro\": {\r\n      \"id\": 3    \r\n    },\r\n    \"telefone\": {\r\n      \"id\": 1\r\n    },\r\n    \"email\": \"ryanocastro@hotmail.com\",\r\n    \"senha\": \"123456\",\r\n\t\t\"crio\": \"1234\"\r\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/protetico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"protetico",
+								"1"
+							]
+						},
+						"description": "Atualizar Protetico Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "PROTETICO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/protetico",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/protetico/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"protetico",
+								"2"
+							]
+						},
+						"description": "Apagar Protetico Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "PROTETICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/protetico",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/protetico/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"protetico",
+								"2"
+							]
+						},
+						"description": "Listar Protetico Especifico"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CLIENTE",
+			"item": [
+				{
+					"name": "CLIENTE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/cliente/2"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"2"
+							]
+						},
+						"description": "Apagar Cliente Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "CLIENTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/cliente/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"2"
+							]
+						},
+						"description": "listar Cliente Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome\": \"Ryan Oliveira\",\r\n    \"cpf\": \"14411851784\",\r\n    \"rua\": \"Rafael Dias Pacheco\",\r\n    \"numero\": 86,\r\n    \"bairro\": {\r\n      \"id\": 3    \r\n    },\r\n    \"telefone\": {\r\n      \"id\": 1\r\n    },\r\n    \"email\": \"ryanocastro@hotmail.com\",\r\n    \"senha\": \"123456\",\r\n\t\t\"tipoCliente\": {\r\n\t\t\t\"id\": 1\r\n\t\t}\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						},
+						"description": "Adicionar Cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "CLIENTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/cliente",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						},
+						"description": "Listar Clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "CLIENTE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"nome\": \"Ryan Oliveira\",\r\n    \"cpf\": \"14411851784\",\r\n    \"rua\": \"Rafael Dias Pacheco\",\r\n    \"numero\": 86,\r\n    \"bairro\": {\r\n      \"id\": 3    \r\n    },\r\n    \"telefone\": {\r\n      \"id\": 1\r\n    },\r\n    \"email\": \"ryanocastro@hotmail.com\",\r\n    \"senha\": \"123456\",\r\n\t\t\"tipoCliente\": {\r\n\t\t\t\"id\": 1\r\n\t\t}\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						},
+						"description": "Atualizar Cliente Especifico"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CIDADE",
+			"item": [
+				{
+					"name": "CIDADE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/cidade/5"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								"5"
+							]
+						},
+						"description": "Apagar cidade Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "CIDADE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/cidade/1",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								"1"
+							]
+						},
+						"description": "listar cidade Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "CIDADE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/cidade",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade"
+							]
+						},
+						"description": "listar cidades"
+					},
+					"response": []
+				},
+				{
+					"name": "CIDADE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\n    nome: Americana,\n    uf: {\n      id: 1\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade"
+							]
+						},
+						"description": "adicionar cidade"
+					},
+					"response": []
+				},
+				{
+					"name": "CIDADE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\n    nome: Bragança,\n    uf: {\n      id: 1\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								"5"
+							]
+						},
+						"description": "Atualizar cidade Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "CIDADE POR UF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cidade/uf/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								"uf",
+								"1"
+							]
+						},
+						"description": "Listar Cidade de uma UF especifica"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "BAIRRO",
+			"item": [
+				{
+					"name": "BAIRRO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/bairro",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bairro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bairro"
+							]
+						},
+						"description": "listar bairros"
+					},
+					"response": []
+				},
+				{
+					"name": "BAIRRO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/bairro/1",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bairro/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bairro",
+								"1"
+							]
+						},
+						"description": "listar bairro Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "BAIRRO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/bairro/1"
+						},
+						"url": {
+							"raw": "http://localhost:8080/bairro/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bairro",
+								"1"
+							]
+						},
+						"description": "apagar bairro Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "BAIRRO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\n    nome: Recanto,\n\t\tcidade: { \n\t\t\tid : 1\n\t\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/bairro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bairro"
+							]
+						},
+						"description": "adcionar bairro"
+					},
+					"response": []
+				},
+				{
+					"name": "BAIRRO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\n    \"nome\": \"Vila Rica\",\n\t\t\"cidade\": { \n\t\t\t\"id\" : 1\n\t\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/bairro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bairro"
+							]
+						},
+						"description": "atualizar bairro Especifico"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TIPO CLIENTE",
+			"item": [
+				{
+					"name": "TIPO CLIENTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/tipoCliente/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoCliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoCliente",
+								"2"
+							]
+						},
+						"description": "listar tipo Cliente Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO CLIENTE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/tipoCliente/1"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoCliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoCliente",
+								"1"
+							]
+						},
+						"description": "apagar tipo Cliente Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO CLIENTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/tipoCliente",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoCliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoCliente"
+							]
+						},
+						"description": "listar tipo Cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO CLIENTE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\n     \"nome\": \"Clinica Pequena\",\n\t\t\"tabelaPreco\": { \n\t\t\t\"id\" : 25\n\t\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoCliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoCliente",
+								"2"
+							]
+						},
+						"description": "atualizar tipo Cliente Especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\n    \"nome\": \"Clinica Grande\",\n\t\t\"tabelaPreco\": { \n\t\t\t\"id\" : 25\n\t\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoCliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoCliente"
+							]
+						},
+						"description": "adicionar tipo Cliente"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "SERVICO",
+			"item": [
+				{
+					"name": "SERVICO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    caixa: {\n      id: 2\n    },\n    tipoServico: {\n      id: 3     \n    }\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/servico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico",
+								"1"
+							]
+						},
+						"description": "atualizar servico especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "SERVICO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/servico/1"
+						},
+						"url": {
+							"raw": "http://localhost:8080/servico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico",
+								"1"
+							]
+						},
+						"description": "apagar servico especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "SERVICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/servico/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/servico/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico",
+								"2"
+							]
+						},
+						"description": "listar servico especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "SERVICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/servico",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/servico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico"
+							]
+						},
+						"description": "listar servico"
+					},
+					"response": []
+				},
+				{
+					"name": "SERVICO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {    \n    \"caixa\": {\n      \"id\": 2\n    },\n    \"tipoServico\": {\n      \"id\": 1\n    }\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/servico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico"
+							]
+						},
+						"description": "adicionar servico"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TELEFONE",
+			"item": [
+				{
+					"name": "TELEFONE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/telefone/4"
+						},
+						"url": {
+							"raw": "http://localhost:8080/telefone/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"telefone",
+								"4"
+							]
+						},
+						"description": "apagar telefone especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "TELEFONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/telefone/3",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/telefone/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"telefone",
+								"3"
+							]
+						},
+						"description": "listar telefone especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "TELEFONE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"numero\": \"28 77777777\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/telefone/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"telefone",
+								"1"
+							]
+						},
+						"description": "adicionar telefone"
+					},
+					"response": []
+				},
+				{
+					"name": "TELEFONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/telefone",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/telefone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"telefone"
+							]
+						},
+						"description": "listar telefone"
+					},
+					"response": []
+				},
+				{
+					"name": "TELEFONE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"numero\": \"28 77777777\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/telefone/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"telefone",
+								"4"
+							]
+						},
+						"description": "atualizar telefone especifico"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "COMISSAO",
+			"item": [
+				{
+					"name": "COMISSAO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    id: 2,\n    valor: 20.0,\n    servico: {\n      id: 2\n    },\n    funcionario: {\n      id: 3\n    }\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/comissao/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comissao",
+								"2"
+							]
+						},
+						"description": "Atualizar comissao Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "COMISSAO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/comissao/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/comissao/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comissao",
+								"2"
+							]
+						},
+						"description": "listar comissao Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "COMISSAO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/comissao",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/comissao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comissao"
+							]
+						},
+						"description": "listar comissao"
+					},
+					"response": []
+				},
+				{
+					"name": "COMISSAO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/comissao/3"
+						},
+						"url": {
+							"raw": "http://localhost:8080/comissao/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comissao",
+								"3"
+							]
+						},
+						"description": "apagar comissao Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "COMISSAO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\tservico: {\n\t\tid: 2\n\t},\n\tvalor: 10.00,\n\tfuncionario: {\n\t\tid: 3\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/comissao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comissao"
+							]
+						},
+						"description": "adicionar comissao"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TIPO SERVICO",
+			"item": [
+				{
+					"name": "TIPO SERVICO",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/tipoServico/2"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoServico/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoServico",
+								"2"
+							]
+						},
+						"description": "apagar tipo de servico especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO SERVICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/tipoServico/1",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoServico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoServico",
+								"1"
+							]
+						},
+						"description": "listar tipo de servico especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO SERVICO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/tipoServico",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoServico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoServico"
+							]
+						},
+						"description": "listar tipo de servico"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO SERVICO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"PPR\",\n\t\"material\": \"Cromo Cobalto\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoServico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoServico"
+							]
+						},
+						"description": "adicionar tipo de servico"
+					},
+					"response": []
+				},
+				{
+					"name": "TIPO SERVICO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"PPR INF\",\n\t\"material\" : \"Cromo Cobalto\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoServico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoServico",
+								"1"
+							]
+						},
+						"description": "atualizar tipo de servico"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "UF",
+			"item": [
+				{
+					"name": "UF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/uf",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/uf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uf"
+							]
+						},
+						"description": "Listar todas as Ufs"
+					},
+					"response": []
+				},
+				{
+					"name": "UF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "http://localhost:8080/uf/2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/uf/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uf",
+								"2"
+							]
+						},
+						"description": "Listar UF Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "UF",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "http://localhost:8080/uf/1"
+						},
+						"url": {
+							"raw": "http://localhost:8080/uf/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uf",
+								"1"
+							]
+						},
+						"description": "Apagar UF especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "UF",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Minas Gerais\",\n\t\"sigla\": \"MG\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/uf/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uf",
+								"1"
+							]
+						},
+						"description": "Atualizar UF Especifica"
+					},
+					"response": []
+				},
+				{
+					"name": "UF",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"São Paulo\",\n\t\"sigla\": \"SP\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/uf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uf"
+							]
+						},
+						"description": "Adicionar UF"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "LOGAR CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/login/logarCliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login",
+								"logarCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGAR FUNCIONARIO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/login/logarFuncionario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login",
+								"logarFuncionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGAR Protetico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/login/logarProtetico",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login",
+								"logarProtetico"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ENUMS",
+			"item": [
+				{
+					"name": "Transporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servico/transporte",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico",
+								"transporte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status/Etapa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servico/status",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pagamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servico/pagamento",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servico",
+								"pagamento"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "RELATORIO",
+			"item": [
+				{
+					"name": "METODO PAGAMENTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/metodoPagamento",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"metodoPagamento"
+							]
+						},
+						"description": "Listar quantidade de vezes que cada metodo de pagamento foi usado"
+					},
+					"response": []
+				},
+				{
+					"name": "CLIENTE COM DEBITO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/clienteComDebito",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"clienteComDebito"
+							]
+						},
+						"description": "Listar Clientes que possuem debito maior que 500,00"
+					},
+					"response": []
+				},
+				{
+					"name": "OS POR PERIODO E CLIENTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/OSPeriodoCliente/2020-08-01/2020-10-30/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"OSPeriodoCliente",
+								"2020-08-01",
+								"2020-10-30",
+								"1"
+							]
+						},
+						"description": "listar Todas as Ordens de serviço de um cliente especifico dentro de em Periodo"
+					},
+					"response": []
+				},
+				{
+					"name": "OS COM DEBITO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/OsComDebito",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"OsComDebito"
+							]
+						},
+						"description": "Listar Ordens de Serviço que não foram pagas"
+					},
+					"response": []
+				},
+				{
+					"name": "SERVICO POR CLIENTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/ServicoPorCliente/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"ServicoPorCliente",
+								"2"
+							]
+						},
+						"description": "Listar  Serviço especifico e mostrar a quantidade de Serviços por Cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "COMISSAO POR FUNCIONARIO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/comissaoPorFuncionario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"comissaoPorFuncionario"
+							]
+						},
+						"description": "Mostrar Comissão de todos Funcionarios"
+					},
+					"response": []
+				},
+				{
+					"name": "TRANSPORTE POR CLIENTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/transportePorCliente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"transportePorCliente",
+								"1"
+							]
+						},
+						"description": "Listar transportes utilizados por um cliente especifico"
+					},
+					"response": []
+				},
+				{
+					"name": "SERVICO REALIZADO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/relatorio/servicoRealizado",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"relatorio",
+								"servicoRealizado"
+							]
+						},
+						"description": "Listar quantidade de serviços realizados"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,64 @@
+Adicionar OS: 
+1. Clicar no + (Mais) Barra Inferior Direita
+2. Preencher todos os campos obrigatórios
+3. Clicar no Botão Confirma no canto Superior Direito.
+
+Adicionar Pagamento:
+
+1. Logo após adicionar a Ordem de Serviço será aberto a tela de Pagamento
+2. Preencher todas os campos obrigatórios.
+3. Clicar no Botão Confirma no canto Superior Direito.
+
+Adicionar Transporte:
+
+1. 1. Logo após adicionar o pagamento será aberto a tela de Transporte
+2. Preencher todas os campos obrigatórios.
+3. Clicar no Botão Confirma no canto Superior Direito.
+
+Listar OS:
+1. Clicar no "Olho" Barra Inferior no Centro
+
+Atualizar OS
+1. Após Listar as Ordens de Serviço clique na desejada
+2. Siga os mesmos Passos para Adicionar OS, Pagamento e Transporte.
+
+Atualizar Perfil:
+
+1. Clique no Bonequinho Barra inferior Esquerda
+2. Preencha todos os Campos obrigatórios
+3. Clicar no Botão Confirma no canto Superior Direito.
+
+Manutenção de Cadastros
+
+Acessar Menu de Cadastros
+
+1. Clique no canto Superior Esquerdo 3 Linhas Retas
+
+
+Adicionar/Atualizar Tabela de Preço:
+
+1. Dentro do Menu de Cadastros Clique em Tabela de Preço
+2. Caso queira criar uma nova tabela selecione nova Tabela
+3. Dê um nome a ela, e clique no + para adicionar novos Itens
+3. Clicar no Botão Confirma no canto Superior Direito.
+
+Adicionar/Atualizar 
+Tipo Serviço, Tipo Cliente, Funcionário, Cliente, Protético, UF, Cidade, Bairro
+
+1. Selecione a opções desejada no Menu
+2. Selecione Novo "Item" ou o item desejado
+3. Preencha os campos obrigatórios
+4. Clique confirmar
+5. Clique no Voltar canto superior esquerdo
+
+Relatório:
+
+1. Dentro do Menu Clicar em Relatórios.
+2. Selecione o relatório desejado
+3. Caso necessite preencha os filtros
+4. Clique Pesquisar
+
+Listagens:
+
+1. Dentro do Menu Clicar em Listagens.
+
